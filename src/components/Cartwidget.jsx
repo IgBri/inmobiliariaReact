@@ -1,12 +1,25 @@
-function Cartwidget ({display, flexDirection, justifyContent, gap}) {
+import Nav from 'react-bootstrap/Nav';
+import { Link } from 'react-router-dom';
+
+function CartWidget() {
     return (
-        <div style={{display: display, flexDirection: flexDirection, justifyContent: justifyContent, gap: gap}}>
-            <span>Casas</span>
-            <span>Departamentos</span>
-            <span>Quintas</span>
-            <span>Comerciales</span>
-        </div>
-    )
+        <Nav fill variant="tabs" defaultActiveKey="/home">
+            <Nav.Item>
+                <Nav.Link as={Link} to="/tipo/Casa">Casas</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+                <Nav.Link as={Link} to="/tipo/Departamento">Departamentos</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+                <Nav.Link as={Link} to="/tipo/Quinta">Quintas</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+                <Nav.Link as={Link} to="/tipo/Comercial">
+                    Comerciales
+                </Nav.Link>
+            </Nav.Item>
+        </Nav>
+    );
 }
 
-export default Cartwidget
+export default CartWidget

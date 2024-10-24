@@ -1,0 +1,23 @@
+.header {
+    display: flex;
+    flex-direction: row;
+}
+.containerLogo {
+    margin: 15px;
+}
+.containerCartWidget{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+}
+.logo {
+    width: 100%;
+    height: auto;
+    font-size: 18px;
+}
+.nav {
+    flex-direction: row;
+    width: 50%;
+    align-items: flex-end;
+}

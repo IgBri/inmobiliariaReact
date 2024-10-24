@@ -1,17 +1,16 @@
-import Cartwidget from "./Cartwidget"
+import CartWidget from "./CartWidget"
+import "../css/Navbar.css"
+import { Link } from 'react-router-dom';
 
-function Navbar ({display, flexDirection, justifyContent, padding}) {
+function Navbar() {
     return (
-        <div style={{display: display, flexDirection: flexDirection, justifyContent: justifyContent, padding: padding}}>
-            <div>
-                <h1>Paletta <br />Inmobiliaria</h1>
+        <div className="header">
+            <div className="containerLogo">
+                <Link to="/"><h1 className="logo">Paletta <br />Inmobiliaria</h1></Link>
             </div>
-            <Cartwidget 
-            display = "flex"
-            flexDirection = "row"
-            justifyContent = "space-around"
-            gap = "10px"
-            />
+            <div className="containerCartWidget">
+                <CartWidget/>
+            </div>
         </div>
     )
 }
