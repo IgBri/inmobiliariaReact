@@ -1,10 +1,11 @@
 import Item from "./Item"
 import "../css/ItemList.css"
-function ItemList ({propiedades}) {
+function ItemList ({properties}) {
+    //Array con las propiedades filtradas
     return(
         <>
             <div className="cardPropiedad">
-                {propiedades.map(propiedad=>
+                {properties.map(propiedad=>
                     <Item item={propiedad} key={propiedad.id}/>
                 )}
             </div>

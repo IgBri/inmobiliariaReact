@@ -1,0 +1,20 @@
+.containerCarrusel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.containerInfo {
+    border: 2px solid blue;
+    width: 100%;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-top: 35px;
+}
+.containerImage {
+    border: 2px solid red;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-top: 35px;
+}

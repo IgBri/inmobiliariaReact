@@ -1,26 +1,25 @@
+import { cartContext } from "../context/cartContext"
 import "./../css/ItemCount.css"
-//import Practicas from "./Practicas"
+import { useState, useContext } from "react"
 
-import { useState } from "react"
-//Importo el HOC
-//import { withNameSelector } from "../hoc/withNameSelector"
-
-function ItemCount () {
+function ItemCount ({detail}) {
 
     const [count, setCount] = useState(0)
+    const {addToCart} = useContext(cartContext)
 
     const handleAdd = () => setCount(count + 1)
     const handleSub = () => setCount(count - 1)
-    
-    console.log(count)
+    const handleAddToCart = () => addToCart({...detail, diasReservados: count})
 
     return(
         <div className="contador">
             <span>Selecciona la cantidad de dias</span>
             <div>
-                <button onClick={handleSub}>-</button>
-                <button>{count}</button>
-                <button onClick={handleAdd}>+</button>
+                <div>
+                    <button onClick={handleSub}>-</button>
+                    <button onClick={handleAddToCart}>Reservo {count} dias</button>
+                    <button onClick={handleAdd}>+</button>
+                </div>
             </div>
         </div>
     )

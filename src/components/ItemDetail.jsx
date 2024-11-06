@@ -15,7 +15,7 @@ function ItemDetail ({detail}) {
                     <span>Modalidad: {detail.modalidad}</span>
                     <span>Precio: ${detail.precio}</span>
                 </div>
-                <ItemCount />
+                <ItemCount detail={detail}/>
             </div>
         </div>
     )

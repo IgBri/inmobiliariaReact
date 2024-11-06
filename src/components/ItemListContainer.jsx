@@ -1,55 +1,45 @@
-import { useEffect, useState } from "react"
-//import ItemListPractica from "./ItemListPractica";
+import { useEffect, useState, useContext } from "react"
 import "../css/ItemListContainer.css"
 import { useParams } from "react-router-dom";
-import { propiedades } from "../data/propiedades";
+//import { propiedades } from "../data/propiedades";
 import ItemList from './ItemList';
+import Loader from "./Loader";
+//import { cartContext } from "../context/cartContext";
+import {getProperties, getTypeProperties} from "../firebase/db.js"
 
 function ItemListContainer () {
-    /*//Variable de estado items
-    const [items, setItems] = useState([])
-    const {categoria} = useParams()
-
-    //Llamada a la API con el hook useEffect
-    useEffect(()=> {
-        const url = 'https://dummyjson.com/products'
-        const urlCategorias = `https://dummyjson.com/products/category/${categoria}`
-
-        fetch(categoria ? urlCategorias : url)
-        .then(res => res.json())
-        .then(res => setItems(res.products))
-    },[categoria])
-
-    return(
-        <div className="container">
-            <ItemListPractica productos={items}/>
-        </div>
-    )*/
-
     const [propiedad, setPropiedad] = useState([])
     const {tipo} = useParams()
+    //const {getPropiedades} = useContext(cartContext)
 
-    //console.log(tipo)
+    //const urlTipos = propiedades.filter(propi=> propi.tipo === tipo)
 
-    const url = propiedades
-    const urlTipos = propiedades.filter(propi=> propi.tipo === tipo)
-    console.log(propiedades)
-    //console.log(urlTipos)
-
-    const getPropiedades = (inmuebles) => new Promise((res, rej)=> {
-        setTimeout(()=>{
-            res(inmuebles)
-        },500)
-    })
+    /*const getPropiedades = (inmuebles) => new Promise((res, rej)=> {
+        if (inmuebles.length !== 0) {
+            setTimeout(()=>{
+                res(inmuebles)
+            },500)
+        } else {
+            rej(console.log("error"))
+        }
+    })*/
 
     useEffect(()=>{
-        getPropiedades(tipo ? urlTipos : url).then(data => setPropiedad(data))
+        if(!tipo){
+            getProperties().then(res => setPropiedad(res))
+        } else {
+            getTypeProperties(tipo).then(res => setPropiedad(res))
+        }
     },[tipo])
 
+    console.log(propiedad)
+
     return(
-        <ItemList propiedades={propiedad}/>
+        //<ItemList propiedades={propiedad}/>
+        <>
+            {propiedad.length > 0 ? <ItemList properties={propiedad}/> : <Loader />}
+        </>
     )
 }
-
 
 export default ItemListContainer

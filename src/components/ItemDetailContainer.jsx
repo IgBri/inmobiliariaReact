@@ -1,34 +1,23 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState, useContext } from "react"
 import { useParams } from "react-router-dom";
 import ItemDetail from "./ItemDetail";
-import { propiedades } from "../data/propiedades";
+//import { propiedades } from "../data/propiedades";
+import { cartContext } from "../context/cartContext";
+import { getDetailPropertie } from "../firebase/db";
 
 function ItemDetailContainer () {
-    const [detail, setDetail] = useState("")
+    const [detail, setDetail] = useState([])
     const {id} = useParams()
-
-    /* useEffect(()=>{
-        fetch(`https://dummyjson.com/products/${id}`)
-            .then(res => res.json())
-            .then(res => setDetail(res));
-    },[id])*/
-
-    const url = propiedades
-    const urlId = propiedades.find(propiedad=> propiedad.id == id)
-    console.log(propiedades)
-    console.log(urlId)
-
-    const getPropiedades = (inmuebles) => new Promise((res, rej)=> {
-        setTimeout(()=>{
-            res(inmuebles)
-        },500)
-    })
-
-    useEffect(()=>{
-        getPropiedades(id ? urlId : url).then(data => setDetail(data))
-    },[id])
+    //const {getPropiedades} = useContext(cartContext)
 
     console.log(detail)
+
+    useEffect(()=>{
+        getDetailPropertie(id).then(res => setDetail(res))
+    },[id])
+
+    //Detail es un objeto
+    //console.log(detail)
 
     return(
         <ItemDetail detail={detail} />

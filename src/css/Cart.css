@@ -1,0 +1,8 @@
+.offcanvas-header {
+    justify-content: center;
+}
+
+.containerClearButton {
+    display: flex;
+    justify-content: flex-end;
+}
