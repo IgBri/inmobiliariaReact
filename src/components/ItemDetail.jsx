@@ -1,8 +1,7 @@
-import "../css/ItemDetail.css"
 import ItemCount from "./ItemCount"
 
-function ItemDetail ({detail}) {
-    return(
+function ItemDetail({ detail }) {
+    return (
         <div className="itemDetail">
             <div className="item">
                 <img src={detail.imagen} alt="" />
@@ -13,9 +12,9 @@ function ItemDetail ({detail}) {
                 <p>{detail.descripcion}</p>
                 <div className="itemInfo">
                     <span>Modalidad: {detail.modalidad}</span>
-                    <span>Precio: ${detail.precio}</span>
+                    <span>Precio: USD {detail.precio}</span>
                 </div>
-                <ItemCount detail={detail}/>
+                <ItemCount detail={detail} />
             </div>
         </div>
     )

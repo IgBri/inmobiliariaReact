@@ -1,0 +1,29 @@
+.services {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    gap: 15px;
+    .itemService {
+        height: 100%;
+        width: 100%;
+        border: 3px solid rgb(3, 3, 90);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        .item {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            align-items: flex-end;
+            a {
+                margin: 2%;
+                button {
+                    border-radius: 10px;
+                    padding-right: 15px;
+                    padding-left: 15px;
+                }
+            }
+        }
+    }
+}

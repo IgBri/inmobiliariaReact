@@ -1,5 +1,5 @@
 import Item from "./Item"
-import "../css/ItemList.css"
+
 function ItemList ({properties}) {
     //Array con las propiedades filtradas
     return(

@@ -1,0 +1,194 @@
+@media screen and (min-width: 768px) {
+    .header {
+        flex-direction: row;
+        height: auto;
+        .containerLogo {
+            width: 30%;
+            padding: 0;
+            a {
+                margin-right: 0px;
+                margin-left: 0px;
+                display: flex;
+                height: 100%;
+                .logo {
+                    font-size: 18px;
+                    height: 100%;
+                    width: 100%;
+                    margin-top: 5%;
+                }
+            }
+        }
+        .containerCartWidget {
+            .nav {
+                flex-direction: row;
+                .nav-item {
+                    height: auto;
+                    width: auto;
+                    display: flex;
+                    align-items: flex-end;
+                    .nav-link {
+                        width: auto;
+                        font-size: 14px;
+                        font-weight: 500;
+                    }
+                }
+            }
+            .containeButtonrCart {
+                margin: 0;                    
+                width: 50%;
+                justify-content: flex-end;
+                .me-2 {
+                    margin-right: 0;
+                    font-size: 15px;
+                    font-weight: 500;
+                    margin: 4%;
+                }
+            }
+        }
+    }
+    .containerCarrusel {
+        .containerImage {
+            .carousel {
+                width: 100%;
+                .carousel-inner {
+                    .carousel-item {
+                        width: 100%;
+                        div {
+                            img {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .containerInfo {
+            .services {
+                flex-direction: row;
+                height: 250px;
+            }
+        }
+    }
+    .cardPropiedad {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        .card {
+            .card-body {
+                .imagen {
+                    height: 14rem;
+                    img {
+                        height: 90%;
+                    }
+                }
+            }
+        }
+    }
+    .itemDetail {
+        flex-direction: row;
+        .item {}
+        .detail {
+            margin: 2%;
+            h2 {
+                font-size: 1rem;
+            }
+            h5 {
+                font-size: 0.9rem;
+            }
+            p {
+                font-size: 0.7rem;
+                font-weight: 500;
+            }
+            .itemInfo {
+                flex-direction: row;
+                span {
+                    width: 100%;
+                    font-size: 0.9rem;
+                    text-align: center;
+                }
+            }
+            .bookingInfo {
+                .dates {
+                    flex-direction: row;
+                }
+            }
+        }
+    }
+    .containerCart {
+        .containerBooking {
+            .reservation {
+                .contaienerBooking1 {
+                    flex-direction: row;
+                    img {
+                        margin: 0%;
+                        width: 50%;
+                    }
+                    .reservationInfo {
+                        width: 100%;
+                        margin: 2%;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 1024px) {
+    .cardPropiedad {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        .card {
+            .card-body {
+                .imagen {
+                    justify-content: center;
+                    height: 192px;
+                    width: 100%;
+                    img {
+                        height: 100%;
+                        width: 224px;
+                    }
+                }
+            }
+        }
+    }
+    .itemDetail {
+        flex-direction: row;
+        .item {}
+        .detail {
+            h2 {
+                font-size: 1.5rem;
+            }
+            h5 {
+                font-size: 1rem;
+            }
+            p {
+                font-size: 1rem;
+                font-weight: 600;
+            }
+            .itemInfo {
+                flex-direction: row;
+                span {
+                    width: 100%;
+                    font-size: 0.9rem;
+                    text-align: center;
+                }
+            }
+            .bookingInfo {
+                .dates {
+                    flex-direction: row;
+                }
+            }
+        }
+    }
+    .containerCarrusel {
+        flex-direction: row;
+        .containerImage {
+            width: 100%;
+        }
+        .containerInfo {
+            width: 40%;
+            .services {
+                height: 100%;
+                flex-direction: column;
+            }
+        }
+    }
+}

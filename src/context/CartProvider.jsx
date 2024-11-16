@@ -1,40 +1,33 @@
 import { cartContext } from "./cartContext";
 import { useState } from "react";
 
-//Creamos un componente como proveedor del cart
 function CartProvider ({children}) {
-    //funcion de estado que almacena el contenido del carrito
     const [cart, setCart] = useState([])
 
-    //setCartDays(days) como parametro recibe {...cart, item}
     const addToCart = (item) => setCart([...cart, item])
 
-    const clearCart = () => setCart([])
+    const clearCart = (id) => {
+        const removeWithId = cart.filter( propertie => propertie.id !== id)
+        setCart(removeWithId)
+    }
 
     const total = cart.length
 
-    const getPropiedades = (inmuebles) => new Promise((res, rej)=> {
-        if (inmuebles.length !== 0){
-            setTimeout(()=>{
-                res(inmuebles)
-            },500)
-        } else {
-            rej(console.log("error"))
-        }
-    })
+    const getPrice = () => {
+        const price = cart.map(propertie => propertie.precio*propertie.periodoReservado.qtyDias)
+        console.log(price) //array con valores
+        console.log(price.at(-1)) //valor
+        return price
+    }
 
-    /*const getReservedDays = () => {
-        //de esta forma vemos en el carrito la cantidad de dias reservados (o count seleccionados)
-        /*const reservedDays = cart.map(item => item.diasReservados)
-        const total = reservedDays.reduce((contador, current)=> contador + current,0)
-
-        //const total = cart.length
-
-        return total
-    }*/
+    const getTotalPrice = () => {
+        const price = cart.map(propertie => propertie.precio*propertie.periodoReservado.qtyDias) //este map me va a crear un array con todos los precios*cantidades
+        const totalPrice = price.reduce((acc, current)=> acc + current, 0) //este reduce suma los precios y retorna el final
+        return totalPrice
+    }
 
     return(
-        <cartContext.Provider value={{cart, addToCart, clearCart, total, getPropiedades}}>
+        <cartContext.Provider value={{cart, addToCart, clearCart, total, getTotalPrice, getPrice, setCart}}>
             {children}
         </cartContext.Provider>
     )

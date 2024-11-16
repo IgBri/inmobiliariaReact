@@ -1,5 +1,3 @@
-import "../css/Item.css"
-//import Descripcion from "./Descripcion"
 import Button from 'react-bootstrap/Button';
 import { Link } from "react-router-dom";
 
@@ -18,7 +16,7 @@ function Item ( {item} ) {
                             <span className="card-info">{item.modalidad}</span>
                             <span className="card-info">U$D {item.precio}</span>
                         </div>
-                        <Button variant="outline-secondary" as={Link} to={`/propiedades/${item.id}`} className="boton">Ver mas</Button>
+                        <Button variant="outline-secondary" as={Link} to={`/propiedades/detalle/${item.id}`} className="boton">Ver mas</Button>
                     </div>
                 </div>
         </>

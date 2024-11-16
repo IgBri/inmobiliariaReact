@@ -1,5 +1,4 @@
 import Carousel from 'react-bootstrap/Carousel';
-import "../css/Carrusel.css"
 import ContainerService from "./ContainerService"
 
 function Carrusel() {
@@ -11,31 +10,28 @@ function Carrusel() {
                         <div>
                             <img src="imagenes/Carrusel Images/Casa Carrusel.jpg" alt="" />
                         </div>
-                        {/*<ExampleCarouselImage text="First slide" />*/}
                         <Carousel.Caption>
-                            <h3>First slide label</h3>
-                            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                            <h3>Casa Villores</h3>
+                            <p>Ubicada al sur de la ciudad de Mar del Plata</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
                         <div>
                             <img src="imagenes/Carrusel Images/Dpto Carrusel.jpg" alt="" />
                         </div>
-                        {/*<ExampleCarouselImage text="Second slide" />*/}
                         <Carousel.Caption>
-                            <h3>Second slide label</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                            <h3>Departamento Madero</h3>
+                            <p>Exclusivo departamento en Puerto Madero</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
                         <div>
                             <img src="imagenes/Carrusel Images/Quinta Carrusel.jpg" alt="" />
                         </div>
-                        {/*<ExampleCarouselImage text="Third slide" />*/}
                         <Carousel.Caption>
-                            <h3>Third slide label</h3>
+                            <h3>Quinta Los Ombues</h3>
                             <p>
-                                Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+                                Perfecta eleccion para disfrutar de la naturaleza y amplitud de una casa de campo.
                             </p>
                         </Carousel.Caption>
                     </Carousel.Item>

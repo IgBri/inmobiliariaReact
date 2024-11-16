@@ -1,0 +1,14 @@
+.containerForm {
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        input {
+            width: 100%;
+        }
+        button {
+            border: 4px outset rgb(3, 3, 90);
+            border-radius: 10px;
+        }
+    }
+}

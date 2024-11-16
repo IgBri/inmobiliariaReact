@@ -1,15 +1,15 @@
 import { useContext } from "react";
 import { cartContext } from "../context/cartContext";
 
-function ClearCartButton () {
+function ClearCartButton ({clearId}) {
 
     const {clearCart} = useContext(cartContext)
 
-    const handleClearCart = () => clearCart()
+    const handleClearCart = () => clearCart(clearId)
 
     return(
         <>
-            <button onClick={handleClearCart}>Borrar carrito</button>
+            <button onClick={handleClearCart}>Borrar del carrito</button>
         </>
     )
 }

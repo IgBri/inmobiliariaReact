@@ -1,0 +1,52 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    border: 2px solid black;
+    background-color: rgb(3, 3, 90);
+    .containerLogo {
+        width: 100%;
+        padding: 5%;
+        a {
+            color: whitesmoke;
+            text-decoration: none;
+            text-align: center;
+            margin-right: 20px;
+            margin-left: 20px;
+        }
+    }
+    .containerCartWidget {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-around;
+        .nav {
+            width: 50%;
+            height: auto;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 5px;
+            .nav-item {
+                height: auto;
+                .nav-link {
+                    color: whitesmoke;
+                    font-size: 1rem;
+                }
+            }
+        }
+        .containeButtonrCart {
+            display: flex;
+            align-self: center;
+            margin: 2%;
+            border: none;
+            a {
+                background-color: rgb(3, 3, 90);
+                color: whitesmoke;
+                border: 2px outset whitesmoke;
+                border-radius: 10px;
+                font-size: 14px;
+            }
+        }
+    }
+}

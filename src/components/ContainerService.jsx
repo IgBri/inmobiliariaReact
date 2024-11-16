@@ -1,27 +1,19 @@
 import { Link } from "react-router-dom"
-import "../css/ContainerService.css"
 
 function ContainerService() {
     return (
         <div className="services">
-            <div className="itemService">
-                <div className="item1">
+            <div className="itemService i1">
+                <div className="item">
                     <Link to="/propiedades">
                         <button>Alquileres temporarios</button>
                     </Link>
                 </div>
             </div>
-            <div className="itemService">
-                <div className="item2">
-                    <Link to="/propiedades">
+            <div className="itemService i2">
+                <div className="item">
+                    <Link to="/propiedadesCorretaje">
                         <button>Propiedes para corretaje</button>
-                    </Link>
-                </div>
-            </div>
-            <div className="itemService">
-                <div className="item3">
-                    <Link to="/propiedades">
-                        <button>Conocenos</button>
                     </Link>
                 </div>
             </div>

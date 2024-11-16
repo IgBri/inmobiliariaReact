@@ -1,28 +1,14 @@
 import { useEffect, useState, useContext } from "react"
-import "../css/ItemListContainer.css"
 import { useParams } from "react-router-dom";
-//import { propiedades } from "../data/propiedades";
 import ItemList from './ItemList';
 import Loader from "./Loader";
 //import { cartContext } from "../context/cartContext";
 import {getProperties, getTypeProperties} from "../firebase/db.js"
 
 function ItemListContainer () {
-    const [propiedad, setPropiedad] = useState([])
-    const {tipo} = useParams()
+    const [propiedad, setPropiedad] = useState([]) //estado donde almacenamos las propiedades recibidas de la db
+    const {tipo} = useParams() //parametro tipo obtenido desde la propiedad de cada producto recibido de la db
     //const {getPropiedades} = useContext(cartContext)
-
-    //const urlTipos = propiedades.filter(propi=> propi.tipo === tipo)
-
-    /*const getPropiedades = (inmuebles) => new Promise((res, rej)=> {
-        if (inmuebles.length !== 0) {
-            setTimeout(()=>{
-                res(inmuebles)
-            },500)
-        } else {
-            rej(console.log("error"))
-        }
-    })*/
 
     useEffect(()=>{
         if(!tipo){
@@ -32,10 +18,7 @@ function ItemListContainer () {
         }
     },[tipo])
 
-    console.log(propiedad)
-
     return(
-        //<ItemList propiedades={propiedad}/>
         <>
             {propiedad.length > 0 ? <ItemList properties={propiedad}/> : <Loader />}
         </>

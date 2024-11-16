@@ -1,3 +1,467 @@
-#root {
-    width: 100%;
+.containerCarrusel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
 }
+.containerCarrusel .containerImage {
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-top: 35px;
+  width: 100%;
+}
+.containerCarrusel .containerImage .carousel {
+  border-radius: 10px;
+  overflow: hidden;
+}
+.containerCarrusel .containerInfo {
+  width: 100%;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-top: 35px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  border: 2px solid black;
+  background-color: rgb(3, 3, 90);
+}
+.header .containerLogo {
+  width: 100%;
+  padding: 5%;
+}
+.header .containerLogo a {
+  color: whitesmoke;
+  text-decoration: none;
+  text-align: center;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+.header .containerCartWidget {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+}
+.header .containerCartWidget .nav {
+  width: 50%;
+  height: auto;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5px;
+}
+.header .containerCartWidget .nav .nav-item {
+  height: auto;
+}
+.header .containerCartWidget .nav .nav-item .nav-link {
+  color: whitesmoke;
+  font-size: 1rem;
+}
+.header .containerCartWidget .containeButtonrCart {
+  display: flex;
+  align-self: center;
+  margin: 2%;
+  border: none;
+}
+.header .containerCartWidget .containeButtonrCart a {
+  background-color: rgb(3, 3, 90);
+  color: whitesmoke;
+  border: 2px outset whitesmoke;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.services {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  gap: 15px;
+}
+.services .itemService {
+  height: 100%;
+  width: 100%;
+  border: 3px solid rgb(3, 3, 90);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+.services .itemService .item {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  align-items: flex-end;
+}
+.services .itemService .item a {
+  margin: 2%;
+}
+.services .itemService .item a button {
+  border-radius: 10px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.itemDetail {
+  overflow: hidden;
+  flex-direction: column;
+  background-color: gray;
+  border-radius: 10px;
+  border: 4px outset rgb(3, 3, 90);
+  display: flex;
+  margin: 5%;
+}
+.itemDetail .item {
+  width: 100%;
+  padding: 2%;
+}
+.itemDetail .item img {
+  height: auto;
+  width: 100%;
+  border: 3px outset black;
+  border-radius: 10px;
+}
+.itemDetail .detail h2 {
+  text-align: center;
+}
+.itemDetail .detail h5 {
+  text-align: center;
+}
+.itemDetail .detail p {
+  text-align: center;
+  margin-right: 5%;
+  margin-bottom: 2%;
+  margin-left: 5%;
+  margin-top: 2%;
+}
+.itemDetail .detail .itemInfo {
+  display: flex;
+  flex-direction: column;
+  border: 3px outset black;
+  border-radius: 10px;
+  margin-right: 5%;
+  margin-bottom: 2%;
+  margin-left: 5%;
+  margin-top: 2%;
+  padding: 2%;
+}
+.itemDetail .detail .itemInfo span {
+  font-weight: 600;
+}
+
+.bookingInfo {
+  display: flex;
+  flex-direction: column;
+}
+.bookingInfo .dates {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.bookingInfo .dates div {
+  display: flex;
+  flex-direction: column;
+  margin-right: 5%;
+  margin-bottom: 2%;
+  margin-left: 5%;
+  margin-top: 2%;
+}
+.bookingInfo .dates div label {
+  text-align: center;
+}
+.bookingInfo button {
+  margin-right: 5%;
+  margin-bottom: 2%;
+  margin-left: 5%;
+  margin-top: 2%;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.cardPropiedad {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 15px;
+  padding: 20px;
+}
+
+.card .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+.card .card-body .imagen {
+  display: flex;
+  width: auto;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.card .card-body .imagen img {
+  width: 100%;
+  height: 18rem;
+  border-radius: 10px;
+}
+.card .card-body .card-title {
+  color: black;
+  font-size: 13px;
+  text-align: center;
+}
+.card .card-body .card-subtitle {
+  text-align: center;
+}
+.card .card-body .card-text {
+  text-align: center;
+}
+.card .card-body .info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.containerCart .containerForm {
+  margin: 5%;
+}
+
+.reservation {
+  display: flex;
+  flex-direction: column;
+  margin: 5%;
+  border: 3px outset rgb(3, 3, 90);
+  border-radius: 10px;
+  overflow: hidden;
+}
+.reservation .contaienerBooking1 {
+  display: flex;
+  flex-direction: column;
+}
+.reservation .contaienerBooking1 .reservationImage {
+  width: 100%;
+  padding: 2%;
+  border-radius: 10%;
+}
+.reservation .contaienerBooking1 .reservationInfo {
+  margin: 5%;
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  font-weight: 500;
+}
+.reservation .contaienerBooking1 .reservationInfo span {
+  height: 100%;
+  font-size: 1rem;
+  text-align: center;
+}
+.reservation .contaienerBooking2 {
+  display: flex;
+  flex-direction: row;
+}
+.reservation .contaienerBooking2 .reservationDates {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 5px;
+  margin: 5%;
+}
+.reservation .contaienerBooking2 .reservationDates span {
+  font-size: 12px;
+  font-weight: 500;
+}
+.reservation .contaienerBooking2 .reservationPrice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 2%;
+  gap: 5%;
+}
+.reservation .contaienerBooking2 .reservationPrice span {
+  font-size: 0.7rem;
+  font-weight: 500;
+}
+.reservation .contaienerBooking2 .reservationPrice button {
+  font-size: 0.7rem;
+  border-radius: 10px;
+}
+
+.containerForm form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.containerForm form input {
+  width: 100%;
+}
+.containerForm form button {
+  border: 4px outset rgb(3, 3, 90);
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    flex-direction: row;
+    height: auto;
+  }
+  .header .containerLogo {
+    width: 30%;
+    padding: 0;
+  }
+  .header .containerLogo a {
+    margin-right: 0px;
+    margin-left: 0px;
+    display: flex;
+    height: 100%;
+  }
+  .header .containerLogo a .logo {
+    font-size: 18px;
+    height: 100%;
+    width: 100%;
+    margin-top: 5%;
+  }
+  .header .containerCartWidget .nav {
+    flex-direction: row;
+  }
+  .header .containerCartWidget .nav .nav-item {
+    height: auto;
+    width: auto;
+    display: flex;
+    align-items: flex-end;
+  }
+  .header .containerCartWidget .nav .nav-item .nav-link {
+    width: auto;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .header .containerCartWidget .containeButtonrCart {
+    margin: 0;
+    width: 50%;
+    justify-content: flex-end;
+  }
+  .header .containerCartWidget .containeButtonrCart .me-2 {
+    margin-right: 0;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 4%;
+  }
+  .containerCarrusel .containerImage .carousel {
+    width: 100%;
+  }
+  .containerCarrusel .containerImage .carousel .carousel-inner .carousel-item {
+    width: 100%;
+  }
+  .containerCarrusel .containerImage .carousel .carousel-inner .carousel-item div img {
+    width: 100%;
+  }
+  .containerCarrusel .containerInfo .services {
+    flex-direction: row;
+    height: 250px;
+  }
+  .cardPropiedad {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .cardPropiedad .card .card-body .imagen {
+    height: 14rem;
+  }
+  .cardPropiedad .card .card-body .imagen img {
+    height: 90%;
+  }
+  .itemDetail {
+    flex-direction: row;
+  }
+  .itemDetail .detail {
+    margin: 2%;
+  }
+  .itemDetail .detail h2 {
+    font-size: 1rem;
+  }
+  .itemDetail .detail h5 {
+    font-size: 0.9rem;
+  }
+  .itemDetail .detail p {
+    font-size: 0.7rem;
+    font-weight: 500;
+  }
+  .itemDetail .detail .itemInfo {
+    flex-direction: row;
+  }
+  .itemDetail .detail .itemInfo span {
+    width: 100%;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  .itemDetail .detail .bookingInfo .dates {
+    flex-direction: row;
+  }
+  .containerCart .containerBooking .reservation .contaienerBooking1 {
+    flex-direction: row;
+  }
+  .containerCart .containerBooking .reservation .contaienerBooking1 img {
+    margin: 0%;
+    width: 50%;
+  }
+  .containerCart .containerBooking .reservation .contaienerBooking1 .reservationInfo {
+    width: 100%;
+    margin: 2%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .cardPropiedad {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .cardPropiedad .card .card-body .imagen {
+    justify-content: center;
+    height: 192px;
+    width: 100%;
+  }
+  .cardPropiedad .card .card-body .imagen img {
+    height: 100%;
+    width: 224px;
+  }
+  .itemDetail {
+    flex-direction: row;
+  }
+  .itemDetail .detail h2 {
+    font-size: 1.5rem;
+  }
+  .itemDetail .detail h5 {
+    font-size: 1rem;
+  }
+  .itemDetail .detail p {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .itemDetail .detail .itemInfo {
+    flex-direction: row;
+  }
+  .itemDetail .detail .itemInfo span {
+    width: 100%;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  .itemDetail .detail .bookingInfo .dates {
+    flex-direction: row;
+  }
+  .containerCarrusel {
+    flex-direction: row;
+  }
+  .containerCarrusel .containerImage {
+    width: 100%;
+  }
+  .containerCarrusel .containerInfo {
+    width: 40%;
+  }
+  .containerCarrusel .containerInfo .services {
+    height: 100%;
+    flex-direction: column;
+  }
+}
+
+/*# sourceMappingURL=App.css.map */

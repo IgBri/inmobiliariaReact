@@ -1,0 +1,49 @@
+.itemDetail {
+    overflow: hidden;
+    flex-direction: column;
+    background-color: gray;
+    border-radius: 10px;
+    border: 4px outset rgb(3, 3, 90);
+    display: flex;
+    margin: 5%;
+    .item {
+        width: 100%;
+        padding: 2%;
+        img {
+            height: auto;
+            width: 100%;
+            border: 3px outset black;
+            border-radius: 10px;
+        }
+    }
+    .detail {
+        h2 {
+            text-align: center;
+        }
+        h5 {
+            text-align: center;
+        }
+        p {
+            text-align: center;
+            margin-right: 5%;
+            margin-bottom: 2%;
+            margin-left: 5%;
+            margin-top: 2%;
+
+        }
+        .itemInfo {
+            display: flex;
+            flex-direction: column;
+            border: 3px outset black;
+            border-radius: 10px;
+            margin-right: 5%;
+            margin-bottom: 2%;
+            margin-left: 5%;
+            margin-top: 2%;
+            padding: 2%;
+            span {
+                font-weight: 600;
+            }
+        }
+    }
+}

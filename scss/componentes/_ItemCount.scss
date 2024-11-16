@@ -1,0 +1,28 @@
+.bookingInfo {
+    display: flex;
+    flex-direction: column;
+    .dates {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        div {
+            display: flex;
+            flex-direction: column;
+            margin-right: 5%;
+            margin-bottom: 2%;
+            margin-left: 5%;
+            margin-top: 2%;
+            label {
+                text-align: center;
+            }
+        }
+    }
+    button {
+        margin-right: 5%;
+        margin-bottom: 2%;
+        margin-left: 5%;
+        margin-top: 2%;
+        border-radius: 10px;
+        font-weight: 600;
+    }
+}

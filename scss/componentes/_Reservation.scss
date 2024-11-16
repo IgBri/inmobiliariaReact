@@ -1,0 +1,61 @@
+.reservation {
+    display: flex;
+    flex-direction: column;
+    margin: 5%;
+    border: 3px outset rgb(3, 3, 90);
+    border-radius: 10px;
+    overflow: hidden;
+    .contaienerBooking1 {
+        display: flex;
+        flex-direction: column;
+        .reservationImage {
+            width: 100%;
+            padding: 2%;
+            border-radius: 10%;
+        }
+        .reservationInfo {
+            margin: 5%;
+            display: flex;
+            flex-direction: column;
+            font-size: 12px;
+            font-weight: 500;
+            span {
+                height: 100%;
+                font-size: 1rem;
+                text-align: center;
+            }
+        }
+    }
+    .contaienerBooking2 {
+        display: flex;
+        flex-direction: row;
+        .reservationDates {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 5px;
+            margin: 5%;
+            span {
+                font-size: 12px;
+                font-weight: 500;
+            }
+        }
+        .reservationPrice {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 2%;
+            gap: 5%;
+            span {
+                font-size: 0.7rem;
+                font-weight: 500;
+            }
+            button {
+                font-size: 0.7rem;
+                border-radius: 10px;
+            }
+        }
+    }
+
+}

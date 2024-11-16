@@ -1,7 +1,6 @@
 import CartWidget from "./CartWidget"
-import "../css/Navbar.css"
 import { Link } from 'react-router-dom';
-import Cart from "./Cart"
+import ButtonCart from "./ButtonCart";
 
 function Navbar() {
     return (
@@ -11,8 +10,8 @@ function Navbar() {
             </div>
             <div className="containerCartWidget">
                 <CartWidget/>
-                <div className="containerCart">
-                    <Cart />
+                <div className="containeButtonrCart">
+                    <ButtonCart />
                 </div>
             </div>
         </div>

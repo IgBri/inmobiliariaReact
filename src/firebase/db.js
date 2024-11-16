@@ -1,11 +1,13 @@
-import { 
-    getFirestore, 
-    collection, 
-    getDocs, 
-    query, 
-    where, 
-    doc, 
-    getDoc} from "firebase/firestore";
+import {
+    getFirestore,
+    collection,
+    getDocs,
+    query,
+    where,
+    doc,
+    getDoc,
+    addDoc
+} from "firebase/firestore";
 import { app } from "./config"
 
 const db = getFirestore(app);
@@ -42,13 +44,20 @@ export const getDetailPropertie = async (id) => {
     const docSnap = await getDoc(docRef);
 
     if (docSnap.exists()) {
-        console.log("Document data:", docSnap.data());
+        return docSnap.data()
     } else {
         // docSnap.data() will be undefined in this case
         console.log("No such document!");
     }
 
-    return 
 }
 
-
+//Esta funcion la debemos importar en donde querramos enviar el objeto "compra" o "reserva"
+export const createBooking = async (booking) => {
+    try {
+        const docRef = await addDoc(collection(db, "bookings"), booking);
+        console.log("Document written with ID: ", docRef.id);
+    } catch (e) {
+        console.error("Error adding document: ", e);
+    }
+}
